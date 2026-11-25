@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aerial's Glyph.Switches (HomeChrome.kt StatusPill), hand-drawn after SF Symbols' switch.2.
+     Geometry from Glyphs.kt switchesPath() in a 100-unit box: line 6, track 36, gap 12,
+     left 4, radius 18; upper track y 8..44, lower track y 56..92. Bounds are x 4..96, y 8..92,
+     so the glyph sits on (50,50) and stays centred in both axes.
+     Upper track: ring (outer minus inset) with its knob solid on the left.
+     Lower track: solid pill with its knob cut out on the right.
+     Every arc is absolute A commands; relative arcs made the left knob render as a partial shape.
+     No stroke: strokes straddle the path and widen the track by half the stroke width.
+     22dp matches the other top-bar glyphs (ic_settings, ic_input, ic_wifi are 22dp) and exactly
+     fills TopButtonIcon's 22dp content box (42dp - 10dp padding each side), so it centres there.
+     scale 0.85 makes the glyph span 78% of the box, the same as the Settings gear. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="22dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <group
+        android:pivotX="50"
+        android:pivotY="50"
+        android:scaleX="0.85"
+        android:scaleY="0.85">
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M22,8H78A18,18 0 0 1 96,26A18,18 0 0 1 78,44H22A18,18 0 0 1 4,26A18,18 0 0 1 22,8ZM22,14H78A12,12 0 0 1 90,26A12,12 0 0 1 78,38H22A12,12 0 0 1 10,26A12,12 0 0 1 22,14Z" />
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M22,8A18,18 0 0 1 40,26A18,18 0 0 1 22,44A18,18 0 0 1 4,26A18,18 0 0 1 22,8Z" />
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:fillType="evenOdd"
+            android:pathData="M22,56H78A18,18 0 0 1 96,74A18,18 0 0 1 78,92H22A18,18 0 0 1 4,74A18,18 0 0 1 22,56ZM78,62A12,12 0 0 1 90,74A12,12 0 0 1 78,86A12,12 0 0 1 66,74A12,12 0 0 1 78,62Z" />
+    </group>
+</vector>
