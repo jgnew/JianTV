@@ -4,8 +4,6 @@ app/build/
 local.properties
 *.apk
 *.aab
-# 发行包例外：只放行 dist/ 下带版本号的安装包
-!dist/JianTV_*.apk
 hs_err_pid*.log
 replay_pid*.log
 .DS_Store
