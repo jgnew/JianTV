@@ -464,7 +464,7 @@ final class WallpaperPlayer {
             Bitmap cropped = Bitmap.createBitmap(scaled, x, y,
                     Math.min(width, scaled.getWidth()), Math.min(height, scaled.getHeight()));
             if (cropped != scaled) scaled.recycle();
-            Bitmap gpu = cropped.copy(Bitmap.Config.HARDWARE, false);
+            Bitmap gpu = ApiCompat.hardwareBitmap(cropped);
             if (gpu == null) return cropped;
             cropped.recycle();
             return gpu;
@@ -503,12 +503,12 @@ final class WallpaperPlayer {
                 options.inDensity = scale[0];
                 options.inTargetDensity = scale[1];
             }
-           options.inPreferredConfig = bitmapConfig;
+            options.inPreferredConfig = bitmapConfig;
             options.inMutable = dimColor != 0;
             Bitmap decoded = BitmapFactory.decodeFile(file.getPath(), options);
             if (decoded == null) return null;
             if (dimColor != 0) new Canvas(decoded).drawColor(dimColor);
-            Bitmap gpu = decoded.copy(Bitmap.Config.HARDWARE, false);
+            Bitmap gpu = ApiCompat.hardwareBitmap(decoded);
             if (gpu == null) return decoded;
             decoded.recycle();
             return gpu;

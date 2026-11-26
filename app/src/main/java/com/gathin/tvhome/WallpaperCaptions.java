@@ -1,8 +1,6 @@
 package com.gathin.tvhome;
 
 import java.io.File;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -39,7 +37,7 @@ final class WallpaperCaptions {
         File file = folder == null ? null : new File(folder, FILE_NAME);
         if (file == null || !file.isFile() || file.length() > 256 * 1024) return Collections.emptyMap();
         try {
-            return parse(Files.readAllLines(file.toPath(), StandardCharsets.UTF_8));
+            return parse(ApiCompat.readLines(file));
         } catch (Exception e) {
             return Collections.emptyMap();
         }

@@ -112,6 +112,11 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
+            <!-- A plain LAUNCHER entry as well: a phone home screen only lists that category. Every app list here skips its own package (AppAdapter, AppLibraryDialog, Cards, Launcher settings), so Home does not list itself. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity

@@ -1,5 +1,6 @@
 package com.gathin.tvhome;
 
+import androidx.core.content.res.ResourcesCompat;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
@@ -17,7 +18,11 @@ final class UiFont {
         TypedValue value = new TypedValue();
         res.getValue(fontString, value, true);
         String name = String.valueOf(value.string);
-        if (name.startsWith("res/")) return res.getFont(value.resourceId);
+        if (name.startsWith("res/")) {
+            // Resources.getFont is API 26; ResourcesCompat resolves the same font XML on 6.0+.
+            Typeface bundled = ResourcesCompat.getFont(context, value.resourceId);
+            if (bundled != null) return bundled;
+        }
         return Typeface.create(name, Typeface.NORMAL);
     }
 }
