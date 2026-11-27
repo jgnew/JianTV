@@ -348,7 +348,7 @@
     <!-- The App library pill after the last Home row. false hides it while library_button is on, so the top-bar
          button stays the way in, and Down from the last row stays put as with app_library off. Can also be set
          with "show_library_pill": false in a theme's config.json. -->
-    <bool name="show_library_pill">true</bool>
+    <bool name="show_library_pill">false</bool>
     <!-- The Settings round button in the top bar. false removes the top bar's way into Launcher settings; a theme
     can set "settings_button": false, and Launcher settings itself can hide it per TV (pill:settings). -->
     <bool name="settings_button">true</bool>

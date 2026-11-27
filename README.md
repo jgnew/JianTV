@@ -33,7 +33,7 @@ $env:ANDROID_HOME = "C:\path\to\android-sdk-34"
 .\gradlew.bat assembleRelease testReleaseUnitTest lintRelease --no-daemon
 ```
 
-产物：`app/build/outputs/apk/release/app-release.apk`，release 构建 APK 约 573 KB（586,784 B）。
+产物：`app/build/outputs/apk/release/app-release.apk`，release 构建 APK 约 573 KB（586,856 B）。
 本地构建前在根目录建 `local.properties` 写 `sdk.dir=<SDK 路径>`（已被 .gitignore 排除）。
 
 可选构建参数：
